@@ -10,7 +10,7 @@ public class DriverFilter {
 		// il metodo accept (che ho io scelto come implementare) per usarlo per fare le sue lavorazioni
 		// ci sono 3 modi di farlo:
 		
-		String path = "C:\\Users\\andre\\eclipse-workspace\\Java8LambdaFilter";
+		String path = System.getProperty("user.dir");
 		File dir = new File(path);
 		
 
@@ -34,7 +34,6 @@ public class DriverFilter {
 		FileFilter jff3 = (File pathname) -> pathname.getName().endsWith(".txt");
 		File[] javaFiles3 = dir.listFiles(jff3);
 		System.out.println(Arrays.toString(javaFiles3));
-		
 		
 	}
 }
